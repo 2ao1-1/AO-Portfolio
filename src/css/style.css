@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes scrollProjects {
+  from {
+    left: 0%; /* يبدأ من خارج الشاشة من اليمين */
+  }
+  to {
+    left: -200%; /* ينتهي خارج الشاشة من اليسار */
+  }
+}
+
+.animate-scrollProjects {
+  animation: scrollProjects 60s linear infinite;
+}

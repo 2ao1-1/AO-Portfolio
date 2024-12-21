@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "antiquestories";
+  src: url("./antiquestories.otf") format("otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ALT_ROGUE";
+  /* src: url("./ALT_ROGUE.ttf") format("ttf"), */
+  src: url("./ALTROGUE.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Architectural";
+  src: url("./Architectural.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}

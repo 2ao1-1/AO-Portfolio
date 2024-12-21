@@ -1,0 +1,16 @@
+{
+  "name": "ao",
+  "version": "1.0.0",
+  "description": "AO portifolio",
+  "license": "ISC",
+  "author": "Ahmed Omran",
+  "type": "commonjs",
+  "scripts": {
+    "build": "tailwindcss -i ./src/css/style.css -o ./src/css/main-style.css",
+    "watch": "tailwindcss -i ./src/css/style.css -o ./src/css/main-style.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {}
+}
