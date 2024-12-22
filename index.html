@@ -86,7 +86,7 @@
           </div>
         </div>
       </header>
-      <div class="container mx-auto flex flex-col justify-evenly">
+      <div class="container mx-auto flex flex-col md:flex-row justify-evenly">
         <div id="heroContent" class="mx-4 my-16 md:mx-10 md:my-20">
           <h1 id="" class="text-2xl md:text-5xl text-black mb-10">
             My name is Ahmed Omran.<br />I'm a
@@ -113,10 +113,15 @@
             View My Work
           </button>
         </div>
-        <div class="myImg my-5 w-1/2 relative flex flex-col-reverse left-4">
-          <img src="assets/img/My__img.png" class="border" alt="My pic" />
+        <div class="myImg my-10 relative w-[200px]">
+          <img
+            src="assets/img/My__img.png"
+            class="border"
+            alt="My pic"
+            width="350px"
+          />
           <p
-            class="text-gray-500 w-full absolute left-0 -top-10 md:bottom-8 md:right-32 tracking-wide hover:text-black cursor-pointer"
+            class="text-gray-500 absolute -top-10 left-0 md:bottom-8 md:right-32 tracking-wide hover:text-black cursor-pointer"
           >
             Use menu to explore
           </p>
@@ -136,7 +141,7 @@
       <div id="menuContent" class="w-full h-full grid grid-cols-2 grid-rows-3">
         <div id="name" class="col-span-1">
           <span class="text-gray-500 text-sm md:text-base">Name</span>
-          <p class="text-lg md:text-2xl text-black leading-6">
+          <p class="text-xl md:text-2xl text-black leading-6">
             <span class="hover:border-b-2 border-black transition-colors"
               >Ahmed Omran</span
             >, <br />
@@ -145,7 +150,7 @@
         </div>
         <div id="status" class="col-span-1">
           <span class="text-gray-500 text-sm md:text-base">Status</span>
-          <p class="text-lg md:text-2xl text-black leading-6">
+          <p class="text-xl md:text-2xl text-black leading-6">
             <span class="text-red-600">Currently</span> available for <br />
             Freelance Projects.
           </p>
