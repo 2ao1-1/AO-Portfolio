@@ -16,17 +16,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body
-    class="*:font-logoFont *:leading-6 font-sans text-gray-900 tracking-sx overflow-hidden"
+    class="*:font-logoFont *:leading-6 font-sans text-gray-900 tracking-sx md:overflow-hidden"
   >
-    <main id="heroPage" class="h-screen after:contents['click to menu']">
+    <main id="heroPage" class="h-screen">
       <header class="border-b">
         <div
           id="head"
-          class="container mx-auto flex gap-4 justify-between items-center py-2"
+          class="container mx-auto flex gap-4 justify-between items-center py-2 px-4"
         >
           <div id="name" class="">
-            <span class="text-gray-500 text-base">Name</span>
-            <p class="text-2xl text-black leading-6">
+            <span class="text-gray-500 text-sm md:text-base tracking-xs"
+              >Name</span
+            >
+            <p class="text-xl md:text-2xl text-black leading-6">
               <span class="hover:border-b-2 border-black transition-colors"
                 >Ahmed Omran</span
               >, <br />
@@ -34,15 +36,15 @@
             </p>
           </div>
           <div id="status" class="">
-            <span class="text-gray-500 text-base">Status</span>
-            <p class="text-2xl text-black leading-6">
+            <span class="text-gray-500 text-sm md:text-base">Status</span>
+            <p class="text-xl md:text-2xl text-black leading-6">
               <span class="text-red-600">Currently</span> available for <br />
               Freelance Projects.
             </p>
           </div>
           <div id="sitemap" class="hidden md:block">
-            <span class="text-gray-500 text-base">Sitemap</span>
-            <p class="text-2xl text-black leading-6">
+            <span class="text-gray-500 text-sm md:text-base">Sitemap</span>
+            <p class="text-lg md:text-2xl text-black leading-6">
               <span class="hover:border-b-2 border-black transition-colors">
                 Index </span
               >,
@@ -61,8 +63,10 @@
             </p>
           </div>
           <div id="contacts" class="hidden md:block">
-            <span class="text-gray-500 text-base">Let's connect</span>
-            <p class="text-2xl text-black leading-6">
+            <span class="text-gray-500 text-sm md:text-base"
+              >Let's connect</span
+            >
+            <p class="text-lg md:text-2xl text-black leading-6">
               <span class="hover:border-b-2 border-black transition-colors"
                 >Resume</span
               >,
@@ -82,9 +86,9 @@
           </div>
         </div>
       </header>
-      <div class="container mx-auto flex flex-row justify-evenly">
-        <div id="heroContent" class="mx-10 my-20">
-          <h1 id="" class="text-5xl text-black mb-10">
+      <div class="container mx-auto flex flex-col justify-evenly">
+        <div id="heroContent" class="mx-4 my-16 md:mx-10 md:my-20">
+          <h1 id="" class="text-2xl md:text-5xl text-black mb-10">
             My name is Ahmed Omran.<br />I'm a
             <span class="text-red-600">Front-End Developer</span> from Cairo
             (EG).
@@ -109,22 +113,90 @@
             View My Work
           </button>
         </div>
-        <div class="myImg m-5">
-          <img
-            src="assets/img/My__img.png"
-            class="border"
-            alt="My pic"
-            width="350px"
-          />
+        <div class="myImg my-5 w-1/2 relative flex flex-col-reverse left-4">
+          <img src="assets/img/My__img.png" class="border" alt="My pic" />
           <p
-            class="text-gray-500 absolute bottom-8 right-32 tracking-wide hover:text-black cursor-pointer lg:hidden"
+            class="text-gray-500 w-full absolute left-0 -top-10 md:bottom-8 md:right-32 tracking-wide hover:text-black cursor-pointer"
           >
             Use menu to explore
           </p>
         </div>
       </div>
     </main>
-
+    <button
+      id="menuBtn"
+      class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-black hover:text-black transition-colors"
+    >
+      menu
+    </button>
+    <div
+      id="menu"
+      class="fixed left-0 top-0 bg-white w-full h-screen overflow-hidden text-black p-4 hidden"
+    >
+      <div id="menuContent" class="w-full h-full grid grid-cols-2 grid-rows-3">
+        <div id="name" class="col-span-1">
+          <span class="text-gray-500 text-sm md:text-base">Name</span>
+          <p class="text-lg md:text-2xl text-black leading-6">
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Ahmed Omran</span
+            >, <br />
+            Front-End Developer.
+          </p>
+        </div>
+        <div id="status" class="col-span-1">
+          <span class="text-gray-500 text-sm md:text-base">Status</span>
+          <p class="text-lg md:text-2xl text-black leading-6">
+            <span class="text-red-600">Currently</span> available for <br />
+            Freelance Projects.
+          </p>
+        </div>
+        <div id="sitemap" class="col-span-2 leading-8">
+          <span class="text-gray-500 text-base">Sitemap</span>
+          <p class="text-3xl leading-8 text-black">
+            <span class="hover:border-b-2 border-black transition-colors">
+              Index </span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >About</span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Projects[5]</span
+            >, <br /><span
+              class="hover:border-b-2 border-black transition-colors"
+              >Services</span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Contact</span
+            >.
+          </p>
+        </div>
+        <div id="contacts" class="col-span-2 leading-8">
+          <span class="text-gray-500 text-xl">Let's connect</span>
+          <p class="text-3xl text-black leading-8">
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Resume</span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Linkedin</span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Instagram</span
+            >,<span class="hover:border-b-2 border-black transition-colors"
+              >Twitter</span
+            >,
+            <span class="hover:border-b-2 border-black transition-colors"
+              >Email</span
+            >.
+          </p>
+        </div>
+      </div>
+      <button
+        id="closeMenuBtn"
+        class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-black hover:text-black transition-colors"
+      >
+        closed
+      </button>
+    </div>
     <script src="src/js/script.js"></script>
   </body>
 </html>

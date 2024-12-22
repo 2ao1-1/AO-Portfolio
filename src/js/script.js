@@ -92,3 +92,17 @@ document.addEventListener("DOMContentLoaded", () => {
     projectsContainer.appendChild(card);
   });
 });
+
+////////////////////////////////////////////////
+const menuBtn = document.getElementById("menuBtn");
+const closeBtn = document.getElementById("closeMenuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+  menu.classList.remove("hidden");
+  menuBtn.classList.add("hidden");
+});
+closeBtn.addEventListener("click", () => {
+  menu.classList.add("hidden");
+  menuBtn.classList.remove("hidden");
+});
