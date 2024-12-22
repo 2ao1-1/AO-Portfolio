@@ -1162,6 +1162,10 @@ video {
     display: block;
   }
 
+  .md\:w-\[350px\] {
+    width: 350px;
+  }
+
   .md\:flex-row {
     flex-direction: row;
   }
