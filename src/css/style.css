@@ -13,3 +13,7 @@
 .animate-scrollProjects {
   animation: scrollProjects 60s linear infinite;
 }
+
+::-webkit-scrollbar {
+  width: 0;
+}
