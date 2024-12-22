@@ -106,3 +106,28 @@ closeBtn.addEventListener("click", () => {
   menu.classList.add("hidden");
   menuBtn.classList.remove("hidden");
 });
+
+/**
+ * about
+ * =======================================
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".page-link");
+  const pages = document.querySelectorAll(".page");
+
+  links.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const pageName = link.getAttribute("data-page");
+
+      // إخفاء كل الأقسام
+      pages.forEach((page) => page.classList.add("hidden"));
+
+      // إظهار القسم المطلوب
+      const targetPage = document.getElementById(pageName);
+      if (targetPage) {
+        targetPage.classList.remove("hidden");
+      }
+    });
+  });
+});

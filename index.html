@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/main-style.css" />
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body
@@ -46,19 +45,25 @@
             <span class="text-gray-500 text-sm md:text-base">Sitemap</span>
             <p class="text-lg md:text-2xl text-black leading-6">
               <span class="hover:border-b-2 border-black transition-colors">
-                Index </span
+                <a href="#" class="page-link" data-page="index">Index</a></span
               >,
               <span class="hover:border-b-2 border-black transition-colors"
-                >About</span
+                ><a href="#" class="page-link" data-page="about">About</a></span
               >,
-              <span class="hover:border-b-2 border-black transition-colors"
-                >Projects[5]</span
-              >, <br /><span
-                class="hover:border-b-2 border-black transition-colors"
-                >Services</span
+              <span class="hover:border-b-2 border-black transition-colors">
+                <a href="#" class="page-link" data-page="myprojects"
+                  >Projects [5]</a
+                ></span
+              >, <br />
+              <span class="hover:border-b-2 border-black transition-colors">
+                <a href="#" class="page-link" data-page="services"
+                  >Services</a
+                ></span
               >,
-              <span class="hover:border-b-2 border-black transition-colors"
-                >Contact</span
+              <span class="hover:border-b-2 border-black transition-colors">
+                <a href="#" class="page-link" data-page="contact"
+                  >Contact</a
+                ></span
               >.
             </p>
           </div>
@@ -86,7 +91,10 @@
           </div>
         </div>
       </header>
-      <div class="container mx-auto flex flex-col md:flex-row justify-evenly">
+      <section
+        id="index"
+        class="page container mx-auto flex flex-col md:flex-row justify-evenly"
+      >
         <div id="heroContent" class="mx-4 my-16 md:mx-10 md:my-20">
           <h1 id="" class="text-2xl md:text-5xl text-black mb-10">
             My name is Ahmed Omran.<br />I'm a
@@ -96,7 +104,7 @@
           <p class="text-3xl mx-5s text-gray-700 mb-4 w-3/4 hidden">
             a passion for crafting stunning websites.
             <span class="text-red-600">Bring ideas to life</span> with code and
-            creativity. <span class="text-red-600">Let’s build</span> something
+            creativity. <span class="text-red-600">Let's build</span> something
             amazing together.
           </p>
 
@@ -113,44 +121,59 @@
             View My Work
           </button>
         </div>
-        <div class="myImg my-10 relative w-[200px] md:w-[350px]">
-          <img src="assets/img/My__img.png" class="" alt="My pic" />
+        <div class="myImg my-10 relative w-[350px]">
+          <img
+            src="assets/img/My__img.png"
+            class="mx-auto w-40 md:w-[350px]"
+            alt="My pic"
+          />
           <p
-            class="text-gray-500 absolute -top-10 left-0 md:bottom-8 md:right-32 tracking-wide hover:text-black cursor-pointer hidden"
+            class="text-gray-500 absolute -top-10 left-5 md:bottom-8 md:right-32 tracking-wide hover:text-black cursor-pointer md:hidden"
           >
             Use menu to explore
           </p>
         </div>
-      </div>
+      </section>
+
+      <section id="about" class="page hidden">About Page Content</section>
+      <section id="myprojects" class="page hidden">
+        Projects Page Content
+      </section>
+      <section id="services" class="page hidden">Services Page Content</section>
+      <section id="contact" class="page hidden">Contact Page Content</section>
     </main>
+
+    <!-- menu btn -->
     <button
       id="menuBtn"
-      class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-black hover:text-black transition-colors"
+      class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-white hover:text-black transition-colors md:hidden"
     >
       menu
     </button>
     <div
       id="menu"
-      class="fixed left-0 top-0 bg-white w-full h-screen overflow-hidden text-black p-4 hidden"
+      class="fixed left-0 top-0 bg-white w-full h-[100dvh] overflow-hidden text-black p-4 hidden"
     >
-      <div id="menuContent" class="w-full h-full grid grid-cols-2 grid-rows-3">
-        <div id="name" class="col-span-1">
-          <span class="text-gray-500 text-sm md:text-base">Name</span>
-          <p class="text-xl md:text-2xl text-black leading-6">
-            <span class="hover:border-b-2 border-black transition-colors"
-              >Ahmed Omran</span
-            >, <br />
-            Front-End Developer.
-          </p>
+      <div id="menuContent" class="w-full h-full flex flex-col justify-around">
+        <div class="flex justify-between">
+          <div id="name">
+            <span class="text-gray-500 text-sm md:text-base">Name</span>
+            <p class="text-xl md:text-2xl text-black leading-6">
+              <span class="hover:border-b-2 border-black transition-colors"
+                >Ahmed Omran</span
+              >, <br />
+              Front-End Developer.
+            </p>
+          </div>
+          <div id="status">
+            <span class="text-gray-500 text-sm md:text-base">Status</span>
+            <p class="text-xl md:text-2xl text-black leading-6">
+              <span class="text-red-600">Currently</span> available for <br />
+              Freelance Projects.
+            </p>
+          </div>
         </div>
-        <div id="status" class="col-span-1">
-          <span class="text-gray-500 text-sm md:text-base">Status</span>
-          <p class="text-xl md:text-2xl text-black leading-6">
-            <span class="text-red-600">Currently</span> available for <br />
-            Freelance Projects.
-          </p>
-        </div>
-        <div id="sitemap" class="col-span-2 leading-8">
+        <div id="sitemap">
           <span class="text-gray-500 text-base">Sitemap</span>
           <p class="text-3xl leading-8 text-black">
             <span class="hover:border-b-2 border-black transition-colors">
@@ -170,7 +193,7 @@
             >.
           </p>
         </div>
-        <div id="contacts" class="col-span-2 leading-8">
+        <div id="contacts">
           <span class="text-gray-500 text-xl">Let's connect</span>
           <p class="text-3xl text-black leading-8">
             <span class="hover:border-b-2 border-black transition-colors"
@@ -192,7 +215,7 @@
       </div>
       <button
         id="closeMenuBtn"
-        class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-black hover:text-black transition-colors"
+        class="fixed bottom-4 right-4 z-50 text-white bg-black border rounded-full px-4 py-0 tracking-xs hover:bg-white hover:text-black transition-colors"
       >
         closed
       </button>
